@@ -3,29 +3,73 @@
     <head>
         <meta charset="utf-8">
         <title>WEB1 - html</title>
+        <style>
+            /* inline element 속성의 기본값 라고한다 */
+            body{
+                margin:0;
+            }
+            h1 {
+                font-size: 45px;
+                text-align: center;
+                border-bottom: solid 1px black;
+                padding: 20px;
+                margin: 0;
+                text-decoration: none;
+
+                /* display:none; 블럭을 없앨수있다 */
+                /* block level element와 inline element는
+                기본값이기에 언제든지 바꿀수있다. */
+            }
+            a {
+                color:rgb(24, 181, 24);
+                text-decoration: none;
+            }
+            ol{ /* 그리스가 조상인 선택자 */
+                border-right: 1px solid black;
+                width: 100px;
+                margin:0;
+                padding:20px
+                
+            }
+            /* block level element  라고한다 */
+            #grid ol{
+                padding-left:33px;
+            }
+            #grid{
+                display: grid;
+                grid-template-columns: 150px 1fr;
+            }
+            #grid #article{
+                padding-left:20px;
+            }
+        </style>
     </head>
     <body>
-        <h1><a href="index.html">WEB</h1>
+        <h1><a href="index.html">WEB</a></h1>
+    <div id="grid">
         <ol>
             <li><a href="1.html">HTML</a></li>
             <li><a href="2.html">CSS</a></li>
             <li><a href="3.html">JavaScript</a></li>
         </ol>
-        <h2>WEB</h2>
-        <p><a href="https://ko.wikipedia.org/wiki/WorldWideWeb"
-            target="_blank" title="html5
-            speicification">WEB(WorldWideWeb)은 스위스에서 태어났으며 세계 최초의 웹 브라우저이자, 위지윅 HTML 편집 프로그램이다. 1991년 2월 26일에 팀 버너스리가 이 프로그램을 처음 소개하였으며 넥스트스텝 플랫폼 위에서 동작한다. 나중에는 월드 와이드 웹의 이름과 충돌을 피하기 위해 넥서스로 이름이 바뀌었다.</a>
-            <img src="coding.jpg" width="100%">
-            <p style="margin-top: 45px;">버너스리가 NeXT 컴퓨터를 세계 최초의 웹 서버로 사용하였으며, 이때 사용한 최초의 웹 브라우저가 유럽 입자 물리 연구소(CERN)에서 사용된 1990년 2분기말 즈음의 월드와이드웹 태동직전의 모습으로 기록되어 있다. 당시 버너스리와  함께 글로벌 하이퍼텍스트라는 개념을 이해해 웹을 개발하고 발전시키는데 공헌한 사람이 CERN의 동료였던 로베르 카이오(Robert Cailliau)였는데, 그의 도움으로 웹 프로젝트는 공식적으로 유럽 입자 물리 연구소(CERN)으로 부터 지원을 받게 되었다. 이무렵 영국에서 대학을 나와 CERN의 인턴연구원으로 합류한 니콜라 펠로(Nicola Fellow)가 개발에 참여하며, 그들은 최초의 웹브라우저도 만들었다. 1990년 성탄절에 버너스리와 카이오는 자신들의 컴퓨터에서 최초의 웹브라우저를 통해 http://info.cern.ch 라고 등록한 웹서버에 접속했는데, 이렇게 완성된 최초의 성공적인 빌드가 월드와이드웹(WWW)이 탄생하는 순간이라고 평가되고 있다.[3]
-              
-              그 뒤에 나온 빌드들은 1991년 8월에 인터넷 뉴스그룹에 공식 출시하기 앞서 버너스리의 CERN 동료들이 돌아가며 사용하였다. 이 시기에 베른트 폴러만(Bernd Pollermann), 진 프랑수아 그로프(Jean-François Groff)도 이 프로젝트에 참여하였다.
-              
-              버너스리와 그로프는 나중에 월드와이드웹의 수많은 구성 요소들을 C 프로그래밍 언어 버전으로 채용하면서 libwww API를 만들어 냈다.
-              
-              수많은 초기 브라우저들이 등장하였으며 그 가운데 눈에 띄는 브라우저는 ViolaWWW였다. 이러한 브라우저들은 모두 1993년까지 모자이크의 인기에 가려졌으며 월드와이드웹 프로그램을 대체하였다. 이러한 일로 월드 와이드 웹의 개발을 위한 표준과 가이드라인을 정의하는 다른 일에 집중하게 되었다. (이를테면 HTML, 다양한 통신 프로토콜 등)
-              
-              1993년 4월 30일에 CERN 이사회는 월드와이드웹의 소스 코드를 자유 소프트웨어 자격으로 퍼블릭 도메인에 출시하기에 이른다. 이 소프트웨어의 일부 버전은 지금도 evolt.org 브라우저 저장소에서 내려받을 수 있다. 버너스리는 처음에 GNU 일반 공중 사용 허가서로 공개할 것을 고려하기도 했지만 회사 지원을 최대화하기 위해 끝내 퍼블릭 도메인에 올리게 되었다.[4]</p>
-              <p> <a href="http://info.cern.ch/" target="_blank" title="First Web site">http://info.cern.ch/</a> web의 메소포타미아 웹의 시작</p>
-        </p>
-    </body>
+        <div id="article">
+            <h2>WEB</h2>
+            <p><a href="https://ko.wikipedia.org/wiki/WorldWideWeb"
+                target="_blank" title="html5
+                speicification">WEB(WorldWideWeb)</a>은 스위스에서 태어났으며 세계 최초의 웹 브라우저이자, 위지윅 HTML 편집 프로그램이다. 1991년 2월 26일에 팀 버너스리가 이 프로그램을 처음 소개하였으며 넥스트스텝 플랫폼 위에서 동작한다. 나중에는 월드 와이드 웹의 이름과 충돌을 피하기 위해 넥서스로 이름이 바뀌었다.</p>
+                <img src="coding.jpg" width="100%">
+                <p style="margin-top: 45px;">버너스리가 NeXT 컴퓨터를 세계 최초의 웹 서버로 사용하였으며, 이때 사용한 최초의 웹 브라우저가 유럽 입자 물리 연구소(CERN)에서 사용된 1990년 2분기말 즈음의 월드와이드웹 태동직전의 모습으로 기록되어 있다. 당시 버너스리와  함께 글로벌 하이퍼텍스트라는 개념을 이해해 웹을 개발하고 발전시키는데 공헌한 사람이 CERN의 동료였던 로베르 카이오(Robert Cailliau)였는데, 그의 도움으로 웹 프로젝트는 공식적으로 유럽 입자 물리 연구소(CERN)으로 부터 지원을 받게 되었다. 이무렵 영국에서 대학을 나와 CERN의 인턴연구원으로 합류한 니콜라 펠로(Nicola Fellow)가 개발에 참여하며, 그들은 최초의 웹브라우저도 만들었다. 1990년 성탄절에 버너스리와 카이오는 자신들의 컴퓨터에서 최초의 웹브라우저를 통해 http://info.cern.ch 라고 등록한 웹서버에 접속했는데, 이렇게 완성된 최초의 성공적인 빌드가 월드와이드웹(WWW)이 탄생하는 순간이라고 평가되고 있다.[3]
+            
+                그 뒤에 나온 빌드들은 1991년 8월에 인터넷 뉴스그룹에 공식 출시하기 앞서 버너스리의 CERN 동료들이 돌아가며 사용하였다. 이 시기에 베른트 폴러만(Bernd Pollermann), 진 프랑수아 그로프(Jean-François Groff)도 이 프로젝트에 참여하였다.
+            
+                버너스리와 그로프는 나중에 월드와이드웹의 수많은 구성 요소들을 C 프로그래밍 언어 버전으로 채용하면서 libwww API를 만들어 냈다.
+            
+                수많은 초기 브라우저들이 등장하였으며 그 가운데 눈에 띄는 브라우저는 ViolaWWW였다. 이러한 브라우저들은 모두 1993년까지 모자이크의 인기에 가려졌으며 월드와이드웹 프로그램을 대체하였다. 이러한 일로 월드 와이드 웹의 개발을 위한 표준과 가이드라인을 정의하는 다른 일에 집중하게 되었다. (이를테면 HTML, 다양한 통신 프로토콜 등)
+            
+                1993년 4월 30일에 CERN 이사회는 월드와이드웹의 소스 코드를 자유 소프트웨어 자격으로 퍼블릭 도메인에 출시하기에 이른다. 이 소프트웨어의 일부 버전은 지금도 evolt.org 브라우저 저장소에서 내려받을 수 있다. 버너스리는 처음에 GNU 일반 공중 사용 허가서로 공개할 것을 고려하기도 했지만 회사 지원을 최대화하기 위해 끝내 퍼블릭 도메인에 올리게 되었다.[4]</p>
+                <p> <a href="http://info.cern.ch/" target="_blank" title="First Web site">http://info.cern.ch/</a> web의 메소포타미아 웹의 시작</p>
+            </p>
+        </div>
+    </div>
+</body>
 </html>
